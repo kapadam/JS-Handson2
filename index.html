@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Handson2</title>
+</head>
+<body>
+    <h1 style="text-align: center;">JS-Handson2</h1>
+    <h1 style="text-align: center;">Decision Making</h1>
+    <h3>1. Write a program to make a simple calculator using switch statement that takes operator and two numbers from user and print the result after operation.</h3>
+    
+    <h3>Source Code:</h3>
+    <pre>
+    const Calculator = (A, B, C) => {
+      switch (A){
+        case '+':
+          return B+C
+        break;
+        case '-':
+          return B-C
+        break;
+        case '*':
+          return B*C
+        break;
+        case '/':
+          return B/C
+        break;
+        default:
+          return undefined
+        break;
+      }
+    };
+    </pre>
+    <h3>2. Write a program that takes a number and prints whether the number is divisible by 6 and 9 or not.</h3>
+    <h3>Source Code:</h3>
+    <pre>
+    const Check_divisibility = (N) => {
+        if(N%6==0 && N%9==0){
+          return "Divisible by both";
+        }
+        else{
+          return "Not Divisible by both";
+        }
+    };
+    </pre>
+    <h3>3. You are given an integer A, denoting the age of a person, and your task is to determine whether he/she is eligible to vote or not.</h3>
+    
+    <h3>Source Code:</h3>
+    <pre>
+    const isEligible = (a) => {
+        if(a>=18){
+          return "Eligible for Voting";
+        }
+        else{
+          return "Not Eligible for Voting";
+        }
+    };
+    </pre>
+    <h3>4. PrepBuddy wants you to get familiar with various Relational operators. He provides you with two integer values X and Y and asks you to find the relation between them.</h3>
+    <h3>Source Code:</h3>
+    <pre>
+    const findRelation = (x,y) => {
+        if(x&lt;y){
+          return x+" is smaller than "+y
+        }
+        else if(x&gt;y){
+          return x+" is greater than "+y
+        }
+        else {
+          return x+" is equal to "+y
+        }
+    };
+    </pre>
+    <h3>5. Your school has the following grading system based upon the marks(M) obtained by a student: </h3>
+    
+    <b>Your friend will enter his marks out of 50, and your task is to print his grades using a switch statement.</b>
+
+    <h3>Source Code:</h3>
+    <pre>
+    const findGrades = (a) => {
+        switch (true){
+          case (a<=10):
+            return "E"
+          break;
+          case (a>=11 && a<=20):
+            return "D"
+          break;
+          case (a>=21 && a<=30):
+            return "C"
+          break;
+          case (a>=31 && a<=40):
+            return "B"
+          break;
+          case (a>=41 && a<=50):
+            return "A"
+          break;
+          default:
+             return undefined
+        }
+    };
+    </pre>
+    <h3>6. You are provided with a table containing some characters and their corresponding values. Your task will be to find the value from the table corresponding to an input character and return it.</h3>
+    <pre>
+    | P or p 	- PrepBytes      	|
+    | Z or z 	- Zenith         	|
+    | E or e 	- Expert Coder   	|
+    | D or d 	- Data Structure 	|
+    </pre>
+    
+    <h3>Source Code:</h3>
+    <pre>
+    const getValue = (a) => {
+        if(a=='P' || a=='p'){
+          return "PrepBytes"
+        }
+        else if(a=='Z' || a=='z'){
+          return "Zenith"
+        }
+        else if(a=='E' || a=='e'){
+          return "Expert Coder"
+        }
+        else if(a=='D' || a=='d'){
+          return "Data Structure"
+        }
+        else{
+          return undefined
+        }
+    };
+    </pre>
+    <h3>7.Take three numbers and print the largest number among them if all of three are same print −1.</h3>
+    
+    <h3>Source Code:</h3>
+    <pre>
+    const Max_out_of_three = (A,B,C) => {
+      if (A!=B && B!=C && C!=A){
+        if(A>B && A>C){
+          return A
+        }
+        else if(B>A && B>C){
+          return B
+        }
+        else {
+          return C
+        }     
+      }
+      else{
+        return "-1"
+      }
+    };
+    </pre>
+    <h3>8. You are given 3 distinct integers X, Y, and Z, and your task is to find and return the second smallest integer among the three provided integers.</h3>
+    
+    <h3>Source Code:</h3>
+    <pre>
+    const findSndSmallest = (x,y,z) => {
+      if (x!=y && y!=z && z!=x){
+        if(x>y && x>z){
+          if(y>z)
+            return y;
+          else
+            return z;
+        }
+        else if(y>x && y>z){
+          if(x>z)
+            return x;
+          else
+            return z;
+        }
+        else if(z>y && z>x){
+          if(y>x)
+            return y;
+          else
+            return x;
+        }
+        else
+          return undefined;
+      }
+      else 
+        return undefined;
+    };
+        
+    </pre>
+    <h3>9. Write a program takes takes three angles and checks whether the triangle is acute or obtuse.</h3>
+    
+    <h3>Source Code:</h3>
+    <pre>
+    const Triangle_Check = (A,B,C) => {
+      if(A&lt;90 && B&lt;90 && C&lt;90){
+        return "acute"
+      }
+      else if(A&gt;=90 && A&lt;180){
+        if (B&lt;90 && C&lt;90){
+          return "obtuse"
+        }
+        else{
+          return undefined
+        }
+      }
+      else if(B&gt;=90 && B&lt;180){
+        if (A&lt;90 && C&lt;90){
+          return "obtuse"
+        }
+        else{
+          return undefined
+        }
+      }
+      else if(C&gt;=90 && C&lt;180){
+        if(A&lt;90 && B&lt;90){
+          return "obtuse"
+        }
+        else{
+          return undefined
+        }
+      }
+      else{
+        return undefined
+      }
+    };
+    </pre>
+</body>
+</html>
